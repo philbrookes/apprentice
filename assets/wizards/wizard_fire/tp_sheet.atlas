@@ -1,0 +1,61 @@
+tp_sheet.png
+size: 816, 1696
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+idle
+  rotate: false
+  xy: 0, 0
+  size: 408, 424
+  orig: 408, 424
+  offset: 0, 0
+  index: 1
+idle
+  rotate: false
+  xy: 408, 0
+  size: 408, 424
+  orig: 408, 424
+  offset: 0, 0
+  index: 2
+idle
+  rotate: false
+  xy: 0, 424
+  size: 408, 424
+  orig: 408, 424
+  offset: 0, 0
+  index: 3
+idle
+  rotate: false
+  xy: 408, 424
+  size: 408, 424
+  orig: 408, 424
+  offset: 0, 0
+  index: 4
+walk
+  rotate: false
+  xy: 0, 848
+  size: 408, 424
+  orig: 408, 424
+  offset: 0, 0
+  index: 1
+walk
+  rotate: false
+  xy: 408, 848
+  size: 408, 424
+  orig: 408, 424
+  offset: 0, 0
+  index: 2
+walk
+  rotate: false
+  xy: 0, 1272
+  size: 408, 424
+  orig: 408, 424
+  offset: 0, 0
+  index: 3
+walk
+  rotate: false
+  xy: 408, 1272
+  size: 408, 424
+  orig: 408, 424
+  offset: 0, 0
+  index: 4

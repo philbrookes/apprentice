@@ -1,0 +1,187 @@
+dungeon_tiles.png
+size: 368,384
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+full_with_borders_top_left
+  rotate: false
+  xy: 32, 32
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: 0
+full_with_borders_left
+   rotate: false
+   xy: 32, 48
+   size: 16, 16
+   orig: 16, 16
+   offset: 0, 0
+   index: 0
+full_with_borders_left
+   rotate: false
+   xy: 32, 64
+   size: 16, 16
+   orig: 16, 16
+   offset: 0, 0
+   index: 1
+full_with_borders_left
+   rotate: false
+   xy: 32, 80
+   size: 16, 16
+   orig: 16, 16
+   offset: 0, 0
+   index: 2
+full_with_borders_bottom_left
+   rotate: false
+   xy: 32, 96
+   size: 16, 16
+   orig: 16, 16
+   offset: 0, 0
+   index: 0
+empty_with_no_borders
+   rotate: false
+   xy: 48, 170
+   size: 16, 16
+   orig: 16, 16
+   offset: 0, 0
+   index: 0
+wizard_blue
+   rotate: false
+   xy: 205, 181
+   size: 16, 16
+   orig: 16, 16
+   offset: 0, 0
+   index: 0
+full_with_no_borders
+   rotate: false
+   xy: 64, 48
+   size: 16, 16
+   orig: 16, 16
+   offset: 0, 0
+   index: 0
+full_with_borders_top
+     rotate: false
+     xy: 64, 32
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 1
+full_with_borders_top
+     rotate: false
+     xy: 80, 32
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 2
+full_with_borders_top_right
+     rotate: false
+     xy: 96, 32
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 0
+full_with_borders_right
+     rotate: false
+     xy: 96, 48
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 0
+full_with_borders_right
+     rotate: false
+     xy: 96, 64
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 1
+full_with_borders_right
+    rotate: false
+    xy: 96, 80
+    size: 16, 16
+    orig: 16, 16
+    offset: 0, 0
+    index: 2
+full_with_borders_bottom
+     rotate: false
+     xy: 48, 96
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 0
+full_with_borders_bottom
+     rotate: false
+     xy: 64, 96
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 1
+full_with_borders_bottom
+     rotate: false
+     xy: 80, 96
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 2
+full_with_borders_bottom_right
+     rotate: false
+     xy: 96, 96
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 0
+full_with_borders_top_bottom_left
+     rotate: false
+     xy: 32, 128
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 0
+full_with_borders_top_bottom
+     rotate: false
+     xy: 40, 128
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 0
+full_with_borders_top_bottom_right
+     rotate: false
+     xy: 48, 128
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 0
+full_with_borders_all
+     rotate: false
+     xy: 68, 128
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 0
+full_with_borders_top_left_right
+     rotate: false
+     xy: 116, 96
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 0
+full_with_borders_left_right
+     rotate: false
+     xy: 116, 100
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 0
+full_with_borders_bottom_left_right
+     rotate: false
+     xy: 116, 112
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 0
+full_all_sides
+    rotate: false
+     xy: 192, 56
+     size: 16, 16
+     orig: 16, 16
+     offset: 0, 0
+     index: 0
