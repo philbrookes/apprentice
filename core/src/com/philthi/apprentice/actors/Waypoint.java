@@ -11,7 +11,7 @@ public class Waypoint extends com.badlogic.gdx.scenes.scene2d.Actor implements A
     private Sprite marker, base;
     public Vector2 position, size, markerPosition, basePosition;
     private boolean up=true;
-    private float speed=33f;
+    private float speed=15f;
 
     public Waypoint(TextureAtlas s, Vector2 p, Vector2 size) {
         super();

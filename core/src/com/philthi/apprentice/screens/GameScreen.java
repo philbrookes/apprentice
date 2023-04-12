@@ -9,9 +9,12 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.input.GestureDetector;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
-import com.badlogic.gdx.physics.bullet.collision._btMprSupport_t;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.utils.Array;
 import com.philthi.apprentice.Apprentice;
+import com.philthi.apprentice.actors.ActorManager;
+import com.philthi.apprentice.actors.DungeonCreatureManager;
+import com.philthi.apprentice.actors.PathActor;
 import com.philthi.apprentice.actors.Player;
 import com.philthi.apprentice.actors.Waypoint;
 import com.philthi.apprentice.maps.DungeonTileFactory;
@@ -20,8 +23,6 @@ import com.philthi.apprentice.maps.Generator;
 import com.philthi.apprentice.maps.Map;
 import com.philthi.apprentice.maps.Path;
 import com.philthi.apprentice.maps.PathFinder;
-
-import java.awt.Color;
 
 public class GameScreen implements Screen, GestureDetector.GestureListener {
     private Apprentice game;
@@ -33,14 +34,19 @@ public class GameScreen implements Screen, GestureDetector.GestureListener {
     private Vector2 tileSize, playerSize, worldSize;
     private PathFinder pf;
 
+    private Array<PathActor> creatures;
+
+
+    private ActorManager creatureFactory;
     public GameScreen(Apprentice game) {
         super();
         tileSize = new Vector2(32, 32);
         playerSize = new Vector2(16, 16);
         worldSize = new Vector2(256,256);
+        creatures = new Array<>();
         this.game = game;
-        DungeonTileFactory tf = new DungeonTileFactory(game.getAssets().get("dungeon/dungeon_tiles.atlas", TextureAtlas.class), tileSize);
         level = new Stage();
+        DungeonTileFactory tf = new DungeonTileFactory(game.getAssets().get("dungeon/dungeon_tiles.atlas", TextureAtlas.class), tileSize);
         cam = ((OrthographicCamera) level.getCamera());
         cam.zoom = 0.2f;
         this.batch = new SpriteBatch();
@@ -50,6 +56,7 @@ public class GameScreen implements Screen, GestureDetector.GestureListener {
         //find an empty square closest to center of map
         Vector2 pPos = map.findNearestEmpty(new Vector2((worldSize.x)/2,(worldSize.y)/2));
         p = new Player(game.getAssets().get("wizards/wizard_walking.atlas", TextureAtlas.class), new Vector2(pPos.x*tileSize.x, pPos.y * tileSize.y), playerSize);
+        creatureFactory = new DungeonCreatureManager(game.getAssets().get("actors/actors.atlas", TextureAtlas.class), 30000, level, pf, p);
         level.addActor(map);
         level.addActor(p);
         GestureDetector gd = new GestureDetector(this);
@@ -73,6 +80,7 @@ public class GameScreen implements Screen, GestureDetector.GestureListener {
         cam.translate(p.position.x-cam.position.x, p.position.y-cam.position.y);
         cam.update();
         level.draw();
+        creatureFactory.Act(delta);
     }
 
     @Override

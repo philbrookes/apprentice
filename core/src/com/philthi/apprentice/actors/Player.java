@@ -49,15 +49,15 @@ public class Player extends PathActor implements Actor{
                 position.add(move);
                 if (Math.abs(move.x) > Math.abs(move.y)) {
                     if (move.x > 0) {
-                        activeAnimation = animations.get("right");
+                        setActiveAnimation(animations.get("right"));
                     } else {
-                        activeAnimation = animations.get("left");
+                        setActiveAnimation(animations.get("left"));
                     }
                 } else {
                     if (move.y > 0) {
-                        activeAnimation = animations.get("up");
+                        setActiveAnimation(animations.get("up"));
                     } else {
-                        activeAnimation = animations.get("down");
+                        setActiveAnimation(animations.get("down"));
                     }
                 }
             }
@@ -65,6 +65,7 @@ public class Player extends PathActor implements Actor{
             if(this.wp != null) {
                 this.wp.remove();
             }
+            setActiveAnimation(animations.get("idle"));
         }
         frame = activeAnimation.getKeyFrame(stateTime += delta, true);
     }
@@ -75,5 +76,13 @@ public class Player extends PathActor implements Actor{
         frame.setScale(size.x / frame.getWidth(), size.y / frame.getWidth());
         frame.setCenter(position.x, position.y);
         frame.draw(batch);
+    }
+
+    private void setActiveAnimation(Animation<Sprite> animation) {
+        if(animation == activeAnimation) {
+            return;
+        }
+        activeAnimation = animation;
+        stateTime = 0;
     }
 }

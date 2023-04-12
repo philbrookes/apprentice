@@ -26,7 +26,7 @@ public class Apprentice extends Game implements ApplicationListener {
 		assets.load("wizards/wizard_fire/tp_sheet.atlas", TextureAtlas.class);
 		assets.load("wizards/wizard_walking.atlas", TextureAtlas.class);
 		assets.load("icons/icons.atlas", TextureAtlas.class);
-
+		assets.load("actors/actors.atlas", TextureAtlas.class);
 	}
 
 	@Override
